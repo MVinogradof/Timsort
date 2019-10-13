@@ -1,22 +1,27 @@
 #include <iostream>
 #include <time.h>
-#include <cstdlib>
+#include <stdlib.h>
+#include <string.h>
 
 using namespace std;
 
 int main()
 {
     srand(time(nullptr));
-    int Array[100];
-    for(int i=0; i<100; i++)
+    int Array[256];
+    int i, j;
+    char str[5];
+    for(i=0; i<256; i++)
     {
-        Array[i] = rand()%100;
+        Array[i] = -99 + rand()%200;
     }
-    for(int i=0; i<100; i++)
+    for(int i=0; i<256; i++)
     {
-        if(i != 0 && i%10 == 0)
+        if(i != 0 && i%16 == 0)
             cout << endl;
-        cout << Array[i] << ' ';
+        cout << Array[i];
+        for(j=0; j<5-strlen(itoa(Array[i], str, 10)); j++)
+            cout << ' ';
     }
     return 0;
 }
