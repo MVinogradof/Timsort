@@ -38,7 +38,7 @@ int main()
     cout << "Array:" << endl;
     cout << "------------------------------------------------------------------------------" << endl;
 
-    for(i=0; i<N; i++)
+    for(i=0; i<N; i++)    // Что делает этот цикл?
     {
         if(i != 0 && i%16 == 0)
             cout << endl;
@@ -50,7 +50,7 @@ int main()
 
     stack <run> Stack;
     run CurrentRun;
-    for(i=0; i<N; i++)
+    for(i=0; i<N; i++)  // Просто кошмарная вложенность. Это почти нечитаемо
     {
         if(Array[i] <= Array[i+1])
         {
@@ -175,7 +175,7 @@ int main()
         temp = new int[Size];
         i = 0;
         j = 0;
-        for(k=0; k<Size; k++)
+        for(k=0; k<Size; k++) // Просто ааааааааааааааааааааааааааааааааааааааа
         {
             if(i > X.size - 1)
             {
